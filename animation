@@ -1,0 +1,12 @@
+animation
+#!/bin/bash
+
+frames=("(7w7)" "(7w7)" "(737)" "(7w7)" "(7_7)")
+clear
+while true; do
+    for frame in "${frames[@]}"; do
+        echo "$frame"
+        sleep 1
+        clear
+    done
+done

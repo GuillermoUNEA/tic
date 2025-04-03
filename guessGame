@@ -1,0 +1,24 @@
+guessGame
+
+figlet "buntu"
+toilet -mono12 -F gay "Terminal Art"
+
+#!/bin/bash
+
+secretNumber-$(($RANDOM % 100+1))
+attempts=0
+echo "guess a number from 1 to 100"
+
+while true; do
+read -p "Introduce your attempt" attempts
+((attempts++))
+
+if((attempts==secretNumber)); then
+echo "youve guessed the correct number! in $attempts attempts"
+break
+elif (attempts<secretNumber));then
+echo "too many attempts"
+else
+echo "too high of a number"
+fi
+done
