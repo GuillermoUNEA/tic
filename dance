@@ -15,7 +15,8 @@ frames=("┗( ^ o^)┓" "|( ^o^ )|" "┏(^o ^ )┛" "|( ^o^ )|")
 clear
 while true; do
     for frame in "${frames[@]}"; do
-        echo $bpm
+        echo "bpm: $bpm"
+        echo "Seconds per beat: $spb"
         echo "$frame"
         sleep $fpb
         clear
