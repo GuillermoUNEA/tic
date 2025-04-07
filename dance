@@ -11,7 +11,7 @@ echo "seconds per beat: $spb"
 echo "frames per beat/frame duration: $fpb"
 
 sleep 4
-frames=("(o  -o)" "(o - o)" "(o-  o)" "(o - o)")
+frames=("┗( ^ o^)┓" "|( ^o^ )|" "┏(^o ^ )┛" "|( ^o^ )|")
 clear
 while true; do
     for frame in "${frames[@]}"; do
