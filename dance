@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo "give me the song bpm"
+read bpm
+bps=$(echo "$bpm/60" | bc -l)
+spb=$(echo "1/$bps" | bc -l)
+fpb=$(echo "$spb/2" | bc -l)
+
+echo "beats per second: $bps"
+echo "seconds per beat: $spb"
+echo "frames per beat/frame duration: $fpb"
+
+sleep 4
+frames=("(o  -o)" "(o - o)" "(o-  o)" "(o - o)")
+clear
+while true; do
+    for frame in "${frames[@]}"; do
+        echo $bpm
+        echo "$frame"
+        sleep $fpb
+        clear
+    done
+done

@@ -6,17 +6,17 @@ toilet -mono12 -F gay "Terminal Art"
 #!/bin/bash
 
 secretNumber-$(($RANDOM % 100+1))
-attempts=0
+attemptCount=0
 echo "guess a number from 1 to 100"
 
 while true; do
-read -p "Introduce your attempt" attempts
-((attempts++))
+read -p "Introduce your attempt" attempt
+((attemptCount++))
 
-if((attempts==secretNumber)); then
-echo "youve guessed the correct number! in $attempts attempts"
+if((attempt==secretNumber)); then
+echo "youve guessed the correct number! in $attemptCount attempts"
 break
-elif (attempts<secretNumber));then
+elif (attempt<secretNumber));then
 echo "too many attempts"
 else
 echo "too high of a number"
